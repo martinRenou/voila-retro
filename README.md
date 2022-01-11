@@ -29,3 +29,11 @@ Or for the dark theme:
 ```
 voila my_notebook.ipynb --template=retro --theme=dark
 ```
+
+### Light theme
+
+![screenshot](./images/retro-light.png)
+
+### Dark theme
+
+![screenshot](./images/retro-dark.png)
