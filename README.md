@@ -2,7 +2,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/voila-dashboards/voila-retro/stable?urlpath=voila)
 
-Retro design template for voila
+Retrolab design template for voila
 
 ## Installation
 

@@ -2,12 +2,8 @@ import sys
 import os
 from setuptools import setup
 from setuptools.command.develop import develop
-import contextlib
 
 pjoin = os.path.join
-
-retrolab_theme_dark_version = '0.3.16'
-retrolab_theme_dark_url = f'https://unpkg.com/@retrolab/application@{jupyterlab_theme_dark_version}/style/base.css'
 
 
 # these are based on jupyter_core.paths
@@ -52,8 +48,7 @@ def user_dir():
 
 class DevelopCmd(develop):
     prefix_targets = [
-        ("nbconvert/templates", 'retro'),
-        ("voila/templates", 'retro')
+        ("nbconvert/templates", 'retro')
     ]
     def run(self):
         target_dir = os.path.join(sys.prefix, 'share', 'jupyter')
@@ -88,13 +83,13 @@ for (dirpath, dirnames, filenames) in os.walk('share/jupyter/'):
 
 setup(
     name='voila-retro',
-    version="0.4.0",
+    version="0.1.0",
     description="Retro design template for voila",
     data_files=data_files,
     include_package_data=True,
     author='Martin Renou',
     author_email='martin.renou@gmail.com',
-    install_requires=['voila>=0.2.1'],
+    install_requires=['voila>=0.2.1,<0.4'],
     url='https://github.com/martinRenou/voila-retro',
     keywords=[
         'ipython',
