@@ -1,6 +1,6 @@
 # voila-retro
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/martinRenou/voila-retro/master?urlpath=voila)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/martinRenou/voila-retro/master?urlpath=voila/render/gradient_descent.ipynb)
 
 Retrolab design template for voila
 
