@@ -1,0 +1,36 @@
+{%- extends 'lab/index.html.j2' -%}
+
+{# This overrides the default behavior of directly starting the kernel and executing the notebook #}
+{% block notebook_execute %}
+{% endblock notebook_execute %}
+
+{%- block html_head_css -%}
+{{ super() }}
+
+{# Load retrolab CSS #}
+<link rel="stylesheet" href="https://unpkg.com/@retrolab/application@latest/style/index.css">
+<link rel="stylesheet" href="https://unpkg.com/@retrolab/notebook-extension@latest/style/index.css">
+
+<style>
+body[data-retro='notebooks'] .jp-Notebook > div:first-of-type {
+    padding-top: var(--jp-notebook-padding-offset);
+    margin-top: var(--jp-notebook-toolbar-margin-bottom);
+}
+</style>
+{%- endblock html_head_css -%}
+
+{%- block body_header -%}
+{% if resources.theme == 'dark' %}
+<body data-retro="notebooks" data-jp-theme-light="false" data-jp-theme-name="JupyterLab Dark">
+{% else %}
+<body data-retro="notebooks" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+{% endif %}
+
+    <div class="jp-Notebook">
+{%- endblock body_header -%}
+
+
+{%- block body_footer -%}
+    </div>
+{{ super() }}
+{%- endblock body_footer -%}
