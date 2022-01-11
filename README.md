@@ -6,17 +6,7 @@ Retro design template for voila
 
 ## Installation
 
-You can install it using pip:
-
-```
-pip install voila-retro
-```
-
-Or using conda:
-
-```
-conda install -c conda-forge voila-retro
-```
+Soonish
 
 ## Usage
 
