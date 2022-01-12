@@ -6,7 +6,20 @@ Retrolab design template for voila and nbconvert
 
 ## Installation
 
-Soonish
+With conda/mamba:
+
+```bash
+conda install -c conda-forge voila-retro
+
+# Or faster
+mamba install -c conda-forge voila-retro
+```
+
+With pip:
+
+```bash
+pip install voila-retro
+```
 
 ## Usage
 
