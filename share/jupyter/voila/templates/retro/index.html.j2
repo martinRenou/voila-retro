@@ -1,4 +1,6 @@
-{%- extends 'nbconvert/templates/retro/index.html.j2' -%}
+{%- extends 'voila/templates/lab/index.html.j2' -%}
+{% import "spinner.macro.html.j2" as spinner %}
+{% from 'voila_setup.macro.html.j2' import voila_setup_helper_functions with context %}
 
 {%- block html_head_css -%}
 {{ super() }}
@@ -24,25 +26,6 @@ body[data-retro='notebooks'] .jp-Notebook > div:first-of-type {
 {% endif %}
 
 {{ spinner.html() }}
-<script>
-var voila_process = function(cell_index, cell_count) {
-  var el = document.getElementById("loading_text")
-  el.innerHTML = `Executing ${cell_index} of ${cell_count}`
-}
-var voila_heartbeat = function() {
-  console.log('Ok, voila is still executing...')
-}
-</script>
-
+{{ voila_setup_helper_functions() }}
 <div class="jp-Notebook" id="rendered_cells" style="display: none">
 {%- endblock body_header -%}
-
-{%- block body_footer -%}
-{{ super() }}
-
-<script type="text/javascript">
-// Fix the cell output display value
-var el = document.getElementById("rendered_cells");
-el.style.display = '';
-</script>
-{%- endblock body_footer -%}
