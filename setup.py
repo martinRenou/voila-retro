@@ -84,7 +84,7 @@ for (dirpath, dirnames, filenames) in os.walk('share/jupyter/'):
 
 setup(
     name='voila-retro',
-    version="0.1.0",
+    version="0.1.1",
     description="Retro design template for voila",
     data_files=data_files,
     include_package_data=True,
